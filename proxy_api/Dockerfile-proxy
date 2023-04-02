@@ -1,0 +1,7 @@
+FROM python:3.10.10-alpine3.17
+WORKDIR /work
+
+#RUN pip install "fastapi<1.0" "uvicorn<0.22" "lorem-text<=2.1.x"
+COPY proxy_api/proxy.py .
+
+CMD ["python3", "proxy.py"]
